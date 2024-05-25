@@ -45,6 +45,7 @@ public class EmployeeService implements IEmployeeService {
         employee.setFirstName(employeeDto.getFirstName());
         employee.setLastName(employeeDto.getLastName());
         employee.setEmail(employeeDto.getEmail());
+        employeeRepository.save(employee);
         return EmployeeMapper.mapToEmployeeDto(employee);
     }
 
